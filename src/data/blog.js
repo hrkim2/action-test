@@ -8,7 +8,7 @@ import html from "remark-html";
 const POST_DIR = path.join(process.cwd(), "src/blog");
 
 const sortListByDateOrTitle = (list) =>
-  list.sort((a, b) => (a.date < b.date && a.title < b.title ? 1 : -1));
+  list.sort((a, b) => (a.date <= b.date && a.title <= b.title ? 1 : -1));
 
 export function getAllSortedPost() {
   const fileNames = fs.readdirSync(POST_DIR);

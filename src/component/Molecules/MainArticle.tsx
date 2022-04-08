@@ -14,7 +14,7 @@ const MainArticle:FunctionComponent<ArticleProps> = ({articleLink, articleName, 
                 <a className='hover:text-light'>{articleName}</a>
             </Link>
             :
-            {articleName}
+            articleName
             }
         </h2>
         {children || <div className='py-[60px] text-center text-black/70'>/ empty😪 /</div>}

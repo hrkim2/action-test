@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import Link from 'next/link';
-import {BlogMeta} from '../types/Blog';
+import {BlogMeta} from 'component/types/Blog';
 import MainArticle from 'component/Molecules/MainArticle';
 
 interface HomeProps {
@@ -9,6 +9,7 @@ interface HomeProps {
 
 const Home: FunctionComponent<HomeProps> = ({blogMetaList})=>{
     return <div className='space-y-4'>
+        <MainArticle articleLink="about" articleName="✨Stack"/>
         <MainArticle articleLink="blog" articleName="🗳Blog">
             {blogMetaList.length>0 &&
             <div className='mt-2 mb-1.5 px-1 space-y-2 divide-y divide-aaa/30 min-h-[300px]'>
@@ -32,7 +33,7 @@ const Home: FunctionComponent<HomeProps> = ({blogMetaList})=>{
             </div>
             }
         </MainArticle>
-        {/* <MainArticle articleLink="portfolio" articleName="🗃Portfolio"/> */}
+        <MainArticle articleLink="portfolio" articleName="🗃Portfolio"/>
     </div>;
 }
 

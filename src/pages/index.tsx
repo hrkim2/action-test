@@ -9,7 +9,10 @@ const Home: NextPage = ({post}:any) => {
 export default Home;
 
 export async function getStaticProps(){
-  const post = await getAllSortedPost();
+  let post = await getAllSortedPost();
+  if(post.length>5){
+    post = post.splice(0, 5);
+  }
 
   return {
     props: {

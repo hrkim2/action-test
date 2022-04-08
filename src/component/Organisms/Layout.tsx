@@ -1,7 +1,6 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import Navbar from 'component/Molecules/Navbar';
 import menuList from 'data/menu.json';
-import Link from 'next/link';
 
 interface LayoutProps {
     asPath: string;
