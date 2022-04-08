@@ -12,9 +12,13 @@ const BLOG_NAME = 'MERRI`s DEVELOG';
 
 const Navbar:FunctionComponent<NavbarProps> = ({menuList, activePath})=>{
     const [toggleUl, setToggleUl] = useState('hidden');
-    console.log(activePath);
     const linkList = menuList.map((menu, idx)=>{
         const linkText = activePath.startsWith(menu.url) ? 'text-highlight' : '';
+        console.log(menu.name);
+        console.log(menu.url);
+        console.log(activePath);
+        console.log(activePath.startsWith(menu.url));
+        console.log(linkText);
 
         return <li key={`${idx}_0`}>
             {
