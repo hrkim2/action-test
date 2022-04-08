@@ -39,5 +39,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          # publish_dir: ./out
+          deploy_key: ${{secrets.ACTIONS_DEPLOY_KEY}}
+          external_repository: hrkim2/hrkim2.github.io
+          publish_branch: main
           publish_dir: ./out
