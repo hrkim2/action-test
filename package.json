@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cache": "node src/script/blogCache.js"
+    "stack": "node src/script/blogCache.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
